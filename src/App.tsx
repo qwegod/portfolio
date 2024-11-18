@@ -1,24 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import About from "./components/about";
+import Education from "./components/education";
+import Languages from "./components/languages";
+import Projects from "./components/projects";
+import Skills from "./components/skills";
+import Title from "./components/title";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex justify-center items-center overflow-hidden bg-[#1E201E] h-screen w-screen">
+      <div className="flex flex-col">
+        <div className="flex">
+          <div className="flex w-[425px] flex-wrap">
+            <Title />
+            <Languages />
+            <About />
+            <div className="m-2 bg-[#373A40] h-[150px] w-[150px] rounded-xl" />
+          </div>
+          <Skills />
+        </div>
+        <div className="flex">
+          <Projects />
+          <Education />
+        </div>
+      </div>
     </div>
   );
 }
